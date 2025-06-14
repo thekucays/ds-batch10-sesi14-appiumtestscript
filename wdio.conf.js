@@ -9,7 +9,7 @@ export const config = {
     'appium:automationName': 'UiAutomator2',
     'appium:appPackage': 'io.appium.android.apis',
     'appium:appActivity': '.ApiDemos',
-    'appium:noReset': true
+    'appium:noReset': false
   }],
   logLevel: 'info',
   framework: 'mocha',

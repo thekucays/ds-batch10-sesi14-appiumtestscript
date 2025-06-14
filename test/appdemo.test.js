@@ -2,6 +2,17 @@ import { expect } from 'chai';
 
 describe('Appium DEMO App', () => {
 
+  afterEach(async () => {
+    // Terminate the app (if running)
+    await browser.execute('mobile: terminateApp', { appId: 'io.appium.android.apis' });
+
+    // Short delay to ensure app is closed
+    await browser.pause(1000);
+
+    // Start the app again
+    await browser.execute('mobile: activateApp', { appId: 'io.appium.android.apis' });
+  });
+
   it('Klik elemen', async () => {
     // menu: home page
     const elemenKlik = await $(`//android.widget.TextView[@content-desc="Accessibility"]`);
