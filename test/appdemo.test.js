@@ -27,6 +27,11 @@ describe('Appium DEMO App', () => {
     await appMenu.click();
     await alertdialogMenu.click();
     await textentryMenu.click();
+    
+
+    // start input elemen
+    const nameField = await $(`//android.widget.EditText[@resource-id="io.appium.android.apis:id/username_edit"]`)
+    const passField = await $(`//android.widget.EditText[@resource-id="io.appium.android.apis:id/password_edit"]`)
   });
   
   it('Memastikan App bisa terbuka dan elemen tersedia', async () => {
